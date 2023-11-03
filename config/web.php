@@ -20,6 +20,10 @@ $config = [
             ],
         ],
         'request' => [
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ],
+            'enableCsrfValidation' => false,
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'DE9ZQ8rsVbHN_Cb-kOXPU_IBSVTqAFut',
         ],
@@ -49,14 +53,6 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-            ],
-        ],
-        */
     ],
     'params' => $params,
 ];
